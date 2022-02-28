@@ -1,0 +1,28 @@
+{
+	"name": "Foreach",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"Folname": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "fc86b6fe-9ace-4153-80af-ca2f5ce166e4.csv",
+				"folderPath": {
+					"value": "@dataset().Folname",
+					"type": "Expression"
+				},
+				"container": "backups"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

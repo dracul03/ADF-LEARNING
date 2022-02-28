@@ -1,0 +1,67 @@
+{
+	"name": "validation",
+	"properties": {
+		"activities": [
+			{
+				"name": "Validation1",
+				"type": "Validation",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "swicase",
+						"type": "DatasetReference",
+						"parameters": {
+							"foldername": "Output2"
+						}
+					},
+					"timeout": "7.00:00:00",
+					"sleep": 10
+				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Validation1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "name",
+					"value": "Naveen"
+				}
+			},
+			{
+				"name": "Set variable2",
+				"description": "Manish",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Validation1",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "name",
+					"value": "Manish"
+				}
+			}
+		],
+		"variables": {
+			"name": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-02-20T23:05:26Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

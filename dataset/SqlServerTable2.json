@@ -1,0 +1,28 @@
+{
+	"name": "SqlServerTable2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Sql_Server1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "ID",
+				"type": "smallint",
+				"precision": 5
+			},
+			{
+				"name": "Salary",
+				"type": "float",
+				"precision": 15
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Salary"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

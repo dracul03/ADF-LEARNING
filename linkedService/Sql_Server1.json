@@ -1,0 +1,16 @@
+{
+	"name": "Sql_Server1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=(local);initial catalog=yarn;user id=naveen",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIwMWM4YWQxMS1mNjYyLTRjOTktOTg5ZS1kM2UxODZlM2VjZWMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SQLintergration",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

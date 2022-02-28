@@ -1,0 +1,9 @@
+{
+	"name": "Learning035",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "31a84de3-93e8-4f10-b6e3-56d64ac95f86",
+		"tenantId": "e4e34038-ea1f-4882-b6e8-ccd776459ca0"
+	}
+}

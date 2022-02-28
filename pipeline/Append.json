@@ -1,0 +1,39 @@
+{
+	"name": "Append",
+	"properties": {
+		"activities": [
+			{
+				"name": "Append variable1",
+				"type": "AppendVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "Namelist",
+					"value": {
+						"value": "@pipeline().parameters.Name",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"Name": {
+				"type": "string",
+				"defaultValue": "Naveen"
+			}
+		},
+		"variables": {
+			"Namelist": {
+				"type": "Array",
+				"defaultValue": [
+					"rim",
+					"kim",
+					"lim"
+				]
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-02-20T22:06:28Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
